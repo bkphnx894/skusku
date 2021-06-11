@@ -8,6 +8,17 @@
  </head>
  <body>
     <p>Enfin ça marche, on arrive à quelque chose !</p>
-    <p>Ce que tu veux</p>
+    <p><a href="https://www.envertetcontretous.fr/">en vert et contre tous</a></p>
+    <header>
+      <h1><a href="/">Django Girls Blog</a></h1>
+  </header>
+  
+  {% for post in posts %}
+      <article>
+          <time>published: {{ post.published_date }}</time>
+          <h2><a href="">{{ post.title }}</a></h2>
+          <p>{{ post.text|linebreaksbr }}</p>
+      </article>
+  {% endfor %}
  </body>
 </html>
